@@ -6,6 +6,11 @@ image:
 
 replicas: 2
 
+database:
+  user: parasol
+  password: parasol
+  name: parasol
+
 hpa:
   minReplicas: 2
   maxReplicas: 5

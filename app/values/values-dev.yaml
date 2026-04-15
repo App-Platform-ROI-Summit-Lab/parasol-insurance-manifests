@@ -5,3 +5,8 @@ image:
   tag: latest
 
 replicas: 1
+
+database:
+  user: parasol
+  password: parasol
+  name: parasol

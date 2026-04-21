@@ -58,6 +58,8 @@ spec:
                 secretKeyRef:
                   name: kafka-credentials
                   key: password
+            - name: KAFKA_TOPIC
+              value: {{ .Values.kafka.topic }}
           resources:
             requests:
               cpu: 250m

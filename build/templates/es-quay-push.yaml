@@ -19,5 +19,5 @@ spec:
   data:
     - secretKey: auth
       remoteRef:
-        key: secrets/quay/auth
+        key: secrets/tenants/{{ .Values.tenant.username }}/quay/auth
         property: value

@@ -15,7 +15,7 @@ spec:
       env:
         - name: MAVEN_OPTS
           value: "-Dmaven.repo.local=$(workspaces.maven-cache.path)/.m2/repository -Xmx1g"
-      resources:
+      computeResources:
         requests:
           cpu: 500m
           memory: 1Gi

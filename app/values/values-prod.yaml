@@ -11,8 +11,8 @@ resources:
     cpu: 500m
     memory: 512Mi
   limits:
-    cpu: 1000m
-    memory: 1Gi
+    cpu: 500m
+    memory: 512Gi
 
 database:
   user: parasol
@@ -21,5 +21,5 @@ database:
 
 hpa:
   minReplicas: 2
-  maxReplicas: 5
+  maxReplicas: 4
   cpuTargetPercent: 10

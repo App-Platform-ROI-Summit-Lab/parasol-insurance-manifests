@@ -9,7 +9,9 @@ metadata:
   annotations:
     app.openshift.io/vcs-uri: "https://gitlab-gitlab.{{ .Values.cluster.subdomain }}/{{ .Values.registry.organization }}/parasol-insurance"
 spec:
+  {{- if not .Values.hpa }}
   replicas: {{ .Values.replicas }}
+  {{- end }}
   selector:
     matchLabels:
       app: parasol-insurance

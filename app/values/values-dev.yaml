@@ -6,6 +6,14 @@ image:
 
 replicas: 1
 
+resources:
+  requests:
+    cpu: 128m
+    memory: 256Mi
+  limits:
+    cpu: 256m
+    memory: 512Mi
+
 database:
   user: parasol
   password: parasol

@@ -62,10 +62,11 @@ spec:
               value: {{ .Values.kafka.topic }}
           resources:
             requests:
-              cpu: 250m
-              memory: 512Mi
+              cpu: {{ .Values.resources.requests.cpu }}
+              memory: {{ .Values.resources.requests.memory }}
             limits:
-              memory: 1Gi
+              cpu: {{ .Values.resources.limits.cpu }}
+              memory: {{ .Values.resources.limits.memory }}
           readinessProbe:
             httpGet:
               path: /q/health/ready
